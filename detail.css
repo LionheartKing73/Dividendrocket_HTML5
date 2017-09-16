@@ -1,0 +1,318 @@
+*{
+	margin: 0 auto;	
+	font-family: "NeueHaas",sans-serif; 
+
+}
+#headerMain{	
+	background-color: #333333;
+	height: 100px;
+	text-align: center;
+}
+#headerMain .logo_container{
+	width: 1128px;
+	height: 100px;
+}
+#headerMain .logo{
+	position: absolute;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#headerMain .title{
+	padding-top: 20px;
+	color: white;
+	font-size: 44px;
+	width: 100%;
+}
+nav{
+	background-color: #333333;
+	height: 30px;
+	width: 100%;
+}
+nav .container{
+	width: 1128px;
+	height: 100%;
+	color: white;
+	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+}
+nav .container .homeicon{
+	width: 24px;
+	height: 24px;
+}
+nav .container .homeicon:hover{
+	color: #ff8000;
+	cursor: pointer;
+}
+nav .container .menu {
+	object-position: center;
+	width: 900px;
+	height: 100%;
+	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+}
+.menu .dropdown {
+	height: 100%;
+	margin: 0 10px;
+    position: relative;
+    display: inline-block;
+}
+.menu .dropdown p:hover{
+	color: #ff8000;
+	cursor: pointer;
+}
+.menu .dropdown_content {
+    display: none;
+    position: absolute;
+    margin-left: -15px;
+    background-color: #333;
+    box-shadow: 2px 2px 0px 0px rgba(255,255,255,0.2);
+    min-width: 140px;
+    padding: 12px 16px;
+    z-index: 1;
+}
+.menu .dropdown_content p{
+	line-height: 30px;
+}
+.menu .dropdown .dropdown_content .item{
+	width: 100%;
+	height: 30px;
+}
+.menu .dropdown:hover .dropdown_content {
+    display: block;
+}
+nav .container .searchicon{
+	margin: 0;
+	width: 24px;
+	height: 24px;
+}
+nav .container .searchicon:hover{
+	color: #ff8000;
+	cursor: pointer;
+}
+
+#content{
+	width: 1128px;
+	height: 800px;
+	margin-top: 20px;
+	margin-bottom: 60px;
+	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+}
+
+.markets_pan{
+	width: 70%;
+	height: 100%;
+}
+ .sub_title{
+	width: 100%;
+	height: 28px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ff8000;
+}
+ .sub_title a{
+ 	width: 100%;
+	font-size: 20px;
+	text-decoration: none;
+	color: black;
+	float: left;
+}
+ .sub_title a:hover{
+	color: #ff8000;
+}
+ .sub_title i{
+	float: right;
+	color: gray;
+	font-size: 24px;
+	cursor: pointer;
+}
+ .sub_title i:hover{
+	color: #ff8000;
+}
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: none;
+    height: 6%;
+	border-top: 1px solid #bbb;
+	border-left: 1px solid #bbb;
+    background-color: #333;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    float: left;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    padding: 0px 0px;
+    opacity: 0.4;
+	display: flex;
+ 	align-items: center;
+}
+button img{
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+}
+.tab h2{
+	color: white;
+	margin: 5px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+	opacity: 0.6;
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+	opacity: 1;
+    background-color: #333; 
+}
+
+/* Style the tab content */
+.tabcontent {
+	height: 92%;
+}
+#bar_Chart{
+	width: 100%;
+	height: 100%;
+}
+#line_Chart{
+	width: 100%;
+	height: 100%;
+}
+
+.stock_detail{
+	width: 28%;
+	height: 100%;
+	margin-top: 100px;
+}
+.stock_detail .detail_header{
+	width: 100%;
+	height: 6%;
+	background-color: #016E97;
+}
+.stock_detail .detail_header h2{
+	text-align: center;
+	padding-top: 10px;
+	color: white;
+}
+.stock_detail .detail{
+	height: 92%;
+	width: 100%;
+	background-color: #ccc;
+	flex-direction: column;
+	display: flex;
+ 	justify-content: space-around;
+ 	align-items: center;
+}
+.stock_detail .detail .name{
+	width: 80%;
+	padding: 10px 10%;
+	color: gray;	
+	background-color: #eee;
+	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+}
+.stock_detail .detail .name div{
+	max-width: 50%;
+	text-align: left;
+}
+
+.detail .name span{
+	text-align: right;
+	width: 50%;
+	color: #555;
+	font-weight: bold;
+}
+.dividend{
+	width: 1128px;
+}
+.dividend .news_content{
+	margin-top: 20px;
+	width: 100%;
+	height: 200px;
+	background-color: #eee;
+	display: flex;
+ 	justify-content: space-around;
+ 	align-items: center;
+	overflow: auto;
+}
+.dividend .news_content .column{
+	width: 45%;
+	height: 100%;
+}
+.news_content .article{
+	margin: 0px 10px;
+	padding: 18px 10px;
+	font-size: 14px;
+	border-bottom: 1px solid #bbb;
+	color: black;
+}
+.article_time{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: gray;
+}
+
+.footer{
+	margin-top: 50px;
+	position: relative;
+	background-color: #eee;
+	width: 100%;
+}
+.footer .footer_bar{
+	width: 100%;
+	height: 60px;
+	background-color: #ddd;
+	opacity: 0.8;
+}
+.footer .footer_container{
+	width: 1128px;
+	height: 240px;
+}
+.footer .footer_container .box_bar{
+	margin: 50px 0;
+	width: 100%;
+	height: 137px;
+	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+}
+.footer .footer_container .box_bar .box{
+	width: 169px;
+	height: 100%;
+	margin: 0;
+ 	background-color: #ccc;
+ 	opacity: 0.8;
+}
+.footer .footer_container .box_bar .box:hover{
+	background-color: #eee; 
+	cursor: pointer;
+}
+.footer .footer_container .box_bar .box h5{
+	color: #ff8000;
+	padding: 10px;
+}
+.footer .footer_container .box_bar .box p{
+	font-size: 10px;
+	padding: 0 10px;
+}
+
+.footer_container .links a{	
+	border-left: 1px solid black;
+	padding: 0 20px;
+	text-decoration: none;
+}
+.copyright a{
+	width: 270px;
+	float: left;
+	text-decoration: none;
+}

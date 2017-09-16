@@ -1,0 +1,62 @@
+Front Page:
+-top menu: #headerNav .container .menu
+-dividend news: #content .top_cat .dividend .news_content
+-market table: #content .top_cat .markets_pan .markets_table
+--tab content: .tabcontent
+---line chart: .tabcontent .graphic A_chart/B_chart/C_chart
+		function drawBackgroundColor(json)	//front.js
+		var names: amonutA, amountB, amountC
+		type: json array
+		ex: [
+		        {'date':'14/11/2017', 'dividend':12}, {'date':'15/11/2017', 'dividend':10},
+		        {'date':'16/11/2017', 'dividend':17}, {'date':'17/11/2017', 'dividend':12},
+		        {'date':'18/11/2017', 'dividend':18}, {'date':'19/11/2017', 'dividend':15},
+		        {'date':'20/11/2017', 'dividend':18}, {'date':'21/11/2017', 'dividend':19}
+		    ]
+-news: #content .news
+--news images: .news .article_board .module_body
+--news label: .news .article_board .module_head
+--news title: .news .article_board h3
+-more news: #content .mt_news
+--images: .mt_news article img
+--titles: .mt_news article span
+-footer box: 
+--title: .footer .footer_container .box_bar .box h5
+--content: .footer .footer_container .box_bar .box p
+-copyright: .footer .footer_container .copyright
+-link: .footer .footer_container .link
+////////////////////////
+Detail Page:
+-bar_chart: #content .martket_pan .tabcontent #bar_Chart
+		function drawBarchart(json);	//detail.js
+		var name: amount
+		type: json array
+		ex: [
+		        {'date':'14/11/2017', 'dividend':12}, {'date':'15/11/2017', 'dividend':10},
+		        {'date':'16/11/2017', 'dividend':17}, {'date':'17/11/2017', 'dividend':12},
+		        {'date':'18/11/2017', 'dividend':18}, {'date':'19/11/2017', 'dividend':15},
+		        {'date':'20/11/2017', 'dividend':18}, {'date':'21/11/2017', 'dividend':19}
+		    ]
+-line_chart: #content .martket_pan .tabcontent #line_Chart
+		function drawLinechart(json);	//detail.js
+		var name: price
+		type: json array
+		ex: [
+		        {'date':'14/11/2017', 'dividend':5}, {'date':'15/11/2017', 'dividend':7},
+		        {'date':'16/11/2017', 'dividend':1}, {'date':'17/11/2017', 'dividend':3},
+		        {'date':'18/11/2017', 'dividend':3}, {'date':'19/11/2017', 'dividend':4},
+		        {'date':'20/11/2017', 'dividend':5}, {'date':'21/11/2017', 'dividend':8}
+		    ]
+-stock_detail: .stock_detail .detail .name 
+		var name: stock_data
+		type: json
+		ex:	{ 
+				'Business' : 'Noricum Gold Ltd (NMG)',
+				'Div' : '0.00',
+				'Share' : '10.25',
+				'Market' : '2.8',
+				'Price' : 'N/A',
+				'Company' : 'Mining',
+				'DpY' : '0',
+				'DpS' : '0.0'
+			}

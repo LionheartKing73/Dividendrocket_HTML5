@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STOCK STATE</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="./js/detail.js"></script>
+ 	<link rel="stylesheet" type="text/css" href="detail.css">
+ 	<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header id="headerMain">
+	<!-- logo-title creation -->
+		<div class="logo_container">
+			<div class="logo">
+				<a href=""><img src="image/logo_footer.png"></a>
+			</div>		
+			<div class="title">			
+				<span>DividendRocket</span>
+			</div>
+		</div>		
+	</header>
+	<!-- navigate menu -->
+	<nav id="headerNav">		
+		<div class="container">
+			<div class="homeicon">
+				<i class="fa fa-home" aria-hidden="true"></i>
+			</div>
+			<!-- dropdown menu -->
+			<div class="menu">
+				<div class="dropdown">
+					<p>Dividend Rocketships</p>
+					<div class="dropdown_content">
+						<div class="item"><p >SELECT1</p></div>
+						<div class="item"><p>SELECT2</p></div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<p>Dividend List</p>
+					<div class="dropdown_content">
+						<div class="item"><p >SELECT1</p></div>
+						<div class="item"><p>SELECT2</p></div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<p>Hot Dividends</p>
+					<div class="dropdown_content">
+						<div class="item"><p >SELECT1</p></div>
+						<div class="item"><p>SELECT2</p></div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<p>American Dividends</p>
+					<div class="dropdown_content">
+						<div class="item"><p >SELECT1</p></div>
+						<div class="item"><p>SELECT2</p></div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<p>British Dividends</p>
+					<div class="dropdown_content">
+						<div class="item"><p >SELECT1</p></div>
+						<div class="item"><p>SELECT2</p></div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<p>FAQ Dividends</p>
+					<div class="dropdown_content">
+						<div class="item"><p >SELECT1</p></div>
+						<div class="item"><p>SELECT2</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="searchicon">
+				<i class="fa fa-search" aria-hidden="true"></i>
+			</div>
+		</div>
+	</nav>
+	<div id="content">
+		<div class="markets_pan">
+			<div class="sub_title">
+					<a href="">
+						<b>DIVIDEND NEWS</b>
+						<i class="fa fa-angle-right" aria-hidden="true"></i>
+					</a>					
+			</div>
+			<div class="tab">
+				<button class="tablinks active" onclick="openTab(event, 'dividend_hist')">
+					<img src="image/bar.png" >
+					<h2>Dividend History</h2>
+				</button>
+				<button class="tablinks" onclick="openTab(event, 'stock_price')">
+					<img src="image/line.png">
+					<h2>Stock Price</h2>
+				</button>
+			</div>
+			<div id="dividend_hist" class="tabcontent">
+				<div id="bar_Chart">
+					<script>
+						var json_data = {
+		                'X':['11/11/2017',
+		                     '12/11/2017',
+		                     '13/11/2017',
+		                     '14/11/2017',
+		                     '15/11/2017',
+		                     '16/11/2017',
+		                     '17/11/2017',
+		                     '18/11/2017',
+		                     '19/11/2017',
+		                     '20/11/2017'
+		                    ],
+		                'Y':[5, 5, 3, 2, 3, 3, 5, 4, 5, 5],
+		                'X_LABEL': 'Date',
+		                'Y_LABEL': 'IBM share price',
+		                'TITLE': 'Last 6 months share data'
+		                };
+		                Chart(json_data, 'bar'); 
+					</script>
+				</div>
+			</div>
+			<div id="stock_price" class="tabcontent" style="display:none">	
+				<div id="line_Chart">
+					<script>
+						var json_data = {
+		                'X':['11/11/2017',
+		                     '12/11/2017',
+		                     '13/11/2017',
+		                     '14/11/2017',
+		                     '15/11/2017',
+		                     '16/11/2017',
+		                     '17/11/2017',
+		                     '18/11/2017',
+		                     '19/11/2017',
+		                     '20/11/2017'
+		                    ],
+		                'Y':[5, 5, 3, 2, 3, 3, 5, 4, 5, 5],
+		                'X_LABEL': 'Date',
+		                'Y_LABEL': 'IBM share price',
+		                'TITLE': 'Last 6 months share data'
+		                };
+		                Chart(json_data, 'line'); 
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="stock_detail">
+			<div class="detail_header">
+				<h2>Stock Detail</h2>
+			</div>
+			<div class="detail">
+				<div class="name">
+					<div class="label">
+						<h4>Business Name</h4>
+					</div>
+				</div>
+				<div class="name">
+					<div class="label">
+						<h4>Dividend Yield (%)</h4>
+					</div>
+				</div>
+				<div class="name">
+					<div class="label">
+						<h4>Share Price (pence)</h4>
+					</div>
+				</div>
+				<div class="name">
+					<div class="label">
+						<h4>Market Cap (£ M)</h4>
+					</div>
+					
+				</div>
+				<div class="name">
+					<div class="label">
+						<h4>Price to Earnings Ratio (P/E)</h4>
+					</div>
+				</div>
+				<div class="name">
+					<div>
+						<h4>Company Sector</h4>
+					</div>
+				</div>
+				<div class="name">
+					<div class="label">
+						<h4>Dividends per Year</h4>
+					</div>
+				</div>
+				<div class="name">
+					<div class="label">
+						<h4>Dividends per Share (pence)</h4>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div class="dividend">
+		<div class="sub_title">
+			<a href="">
+				<b>DIVIDEND NEWS</b>
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+			</a>					
+		</div>
+		<div class="news_content">
+			<div class="column">
+				<article class="article">
+					<time class="article_time">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<span>8 hours ago</span>
+					</time>
+					<p>Former Oracle board member dogged by links to China-backed chip deal</p>
+				</article>
+				<article class="article">
+					<time class="article_time">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<span>8 hours ago</span>
+					</time>
+					<p>Former Oracle board member dogged by links to China-backed chip deal</p>
+				</article>
+				<article class="article">
+					<time class="article_time">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<span>8 hours ago</span>
+					</time>
+					<p>Former Oracle board member dogged by links to China-backed chip deal</p>
+				</article>
+				<article class="article">
+					<time class="article_time">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<span>8 hours ago</span>
+					</time>
+					<p>Former Oracle board member dogged by links to China-backed chip deal</p>
+				</article>
+			</div>
+			<div class="column">
+				<article class="article">
+					<time class="article_time">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<span>8 hours ago</span>
+					</time>
+					<p>Former Oracle board member dogged by links to China-backed chip deal</p>
+				</article>
+				<article class="article">
+					<time class="article_time">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<span>8 hours ago</span>
+					</time>
+					<p>Former Oracle board member dogged by links to China-backed chip deal</p>
+				</article>
+				<article class="article">
+					<time class="article_time">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<span>8 hours ago</span>
+					</time>
+					<p>Former Oracle board member dogged by links to China-backed chip deal</p>
+				</article>
+				<article class="article">
+					<time class="article_time">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<span>8 hours ago</span>
+					</time>
+					<p>Former Oracle board member dogged by links to China-backed chip deal</p>
+				</article>
+			</div>			
+		</div>
+	</div>
+	<div class="footer">		
+		<div class="footer_bar">
+		</div>
+		<div class="footer_container">
+			<div class="box_bar">
+				<!-- footer box -->
+				<div class="box">
+					<h5>BOX_TITLE</h5>
+					<p>The industry leader for online information for tax, accounting and finance professionals</p>
+				</div>
+				<div class="box">
+					<h5>BOX_TITLE</h5>
+					<p>The industry leader for online information for tax, accounting and finance professionals</p>
+				</div>
+				<div class="box">
+					<h5>BOX_TITLE</h5>
+					<p>The industry leader for online information for tax, accounting and finance professionals</p>
+				</div>
+				<div class="box">
+					<h5>BOX_TITLE</h5>
+					<p>The industry leader for online information for tax, accounting and finance professionals</p>
+				</div>
+				<div class="box">
+					<h5>BOX_TITLE</h5>
+					<p>The industry leader for online information for tax, accounting and finance professionals</p>
+				</div>
+			</div>
+			<!-- copyright -->
+			<div class="copyright">
+				<a href="">© 2015-2017 Dividend Rocket.com</a>	
+			</div>
+			<!-- dividendrocket links -->
+			<div class="links">
+				<a href="">terms of service</a>
+				<a href="">privacy</a>
+			</div>		
+		</div>		
+	</div>
+	<script>
+
+		function openTab(evt, countryName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+		        tabcontent[i].style.display = "none";
+		    }
+		    tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+		        tablinks[i].className = tablinks[i].className.replace(" active", "");
+		    }
+		    document.getElementById(countryName).style.display = "block";
+		    evt.currentTarget.className += " active";
+		    onChartLoad();
+		}
+		//stock_detail dom insert
+		
+		var stock_data = { 
+							'Business' : 'Noricum Gold Ltd (NMG)',
+							'Div' : '0.00',
+							'Share' : '10.25',
+							'Market' : '2.8',
+							'Price' : 'N/A',
+							'Company' : 'Mining',
+							'DpY' : '0',
+							'DpS' : '0.0'
+						};
+		var index = 0;
+		var obj = document.getElementsByClassName("name");
+		for(var key in stock_data){
+			var span = document.createElement("span"); 
+			var t = document.createTextNode(stock_data[key]);
+			span.appendChild(t);
+			obj[index].appendChild(span);
+			index++;
+		}		
+	</script>
+</body>
+
+</html>
+
+
+
